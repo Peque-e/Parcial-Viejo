@@ -1,0 +1,158 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1034pt" height="359pt" viewBox="0.00 0.00 1034.05 359.18">
+<!--
+Generado desde el siguiente snippet de graphviz
+digraph {
+    rankdir=LR
+    node [shape=circle]
+    "" [shape=none]
+    Ejecutable
+    Pausada, "buscando\npareja", "en pareja\n(no quiere)" [color=blue]
+    
+    "" -> "sin\npareja" [label="Arranca la\ntarea"]
+    "sin\npareja" -> "buscando\npareja" [label="crear_pareja()"]
+    "sin\npareja" -> "sin\npareja" [label="juntarse_con(id) dió 1"]
+    "sin\npareja" -> "en pareja\n(no-líder)" [label="juntarse_con(id) dió 0"]
+    "buscando\npareja" -> "en pareja\n(líder)" [label="alguien\nse suma"]
+    "en pareja\n(líder)" -> "en pareja\n(solo)" [label="la otra tarea\nabandona"]
+    "en pareja\n(solo)" -> "sin\npareja" [label="abandonar_pareja()"]
+    "en pareja\n(no-líder)" -> "sin\npareja" [label="abandonar_pareja()"]
+    "en pareja\n(líder)" -> "en pareja\n(no quiere)" [label="abandonar_pareja()"]
+    "en pareja\n(no quiere)" -> "sin\npareja" [label="la otra tarea\nabandona"]
+}
+-->
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 355.18)">
+<polygon fill="white" stroke="none" points="-4,4 -4,-355.18 1030.05,-355.18 1030.05,4 -4,4"/>
+<g id="node1" class="node">
+<title/>
+</g>
+<!-- sin\npareja -->
+<g id="node6" class="node">
+<title>sin\npareja</title>
+<ellipse fill="none" stroke="black" cx="233.74" cy="-108.49" rx="35.49" ry="35.49"/>
+<text text-anchor="middle" x="233.74" y="-112.69" font-family="Times,serif" font-size="14.00">sin</text>
+<text text-anchor="middle" x="233.74" y="-95.89" font-family="Times,serif" font-size="14.00">pareja</text>
+</g>
+<!-- &#45;&gt;sin\npareja -->
+<g id="edge1" class="edge">
+<title>-&gt;sin\npareja</title>
+<path fill="none" stroke="black" d="M78.57,-108.49C106.77,-108.49 152.53,-108.49 186.89,-108.49"/>
+<polygon fill="black" stroke="black" points="186.55,-111.99 196.55,-108.49 186.55,-104.99 186.55,-111.99"/>
+<text text-anchor="middle" x="150.91" y="-129.49" font-family="Times,serif" font-size="14.00">Arranca la</text>
+<text text-anchor="middle" x="150.91" y="-112.69" font-family="Times,serif" font-size="14.00">tarea</text>
+</g>
+<!-- Ejecutable -->
+<g id="node2" class="node">
+<title>Ejecutable</title>
+<ellipse fill="none" stroke="black" cx="51.79" cy="-196.49" rx="51.79" ry="51.79"/>
+<text text-anchor="middle" x="51.79" y="-192.29" font-family="Times,serif" font-size="14.00">Ejecutable</text>
+</g>
+<!-- Pausada -->
+<g id="node3" class="node">
+<title>Pausada</title>
+<ellipse fill="none" stroke="blue" cx="51.79" cy="-308.49" rx="42.68" ry="42.68"/>
+<text text-anchor="middle" x="51.79" y="-304.29" font-family="Times,serif" font-size="14.00">Pausada</text>
+</g>
+<!-- buscando\npareja -->
+<g id="node4" class="node">
+<title>buscando\npareja</title>
+<ellipse fill="none" stroke="blue" cx="480.31" cy="-186.49" rx="48.7" ry="48.7"/>
+<text text-anchor="middle" x="480.31" y="-190.69" font-family="Times,serif" font-size="14.00">buscando</text>
+<text text-anchor="middle" x="480.31" y="-173.89" font-family="Times,serif" font-size="14.00">pareja</text>
+</g>
+<!-- en pareja\n(líder) -->
+<g id="node8" class="node">
+<title>en pareja\n(líder)</title>
+<ellipse fill="none" stroke="black" cx="723.89" cy="-186.49" rx="47.31" ry="47.31"/>
+<text text-anchor="middle" x="723.89" y="-190.69" font-family="Times,serif" font-size="14.00">en pareja</text>
+<text text-anchor="middle" x="723.89" y="-173.89" font-family="Times,serif" font-size="14.00">(líder)</text>
+</g>
+<!-- buscando\npareja&#45;&gt;en pareja\n(líder) -->
+<g id="edge5" class="edge">
+<title>buscando\npareja-&gt;en pareja\n(líder)</title>
+<path fill="none" stroke="black" d="M529.33,-186.49C568.32,-186.49 623.44,-186.49 664.89,-186.49"/>
+<polygon fill="black" stroke="black" points="664.68,-189.99 674.68,-186.49 664.68,-182.99 664.68,-189.99"/>
+<text text-anchor="middle" x="604.17" y="-207.49" font-family="Times,serif" font-size="14.00">alguien</text>
+<text text-anchor="middle" x="604.17" y="-190.69" font-family="Times,serif" font-size="14.00">se suma</text>
+</g>
+<!-- en pareja\n(no quiere) -->
+<g id="node5" class="node">
+<title>en pareja\n(no quiere)</title>
+<ellipse fill="none" stroke="blue" cx="971.04" cy="-236.49" rx="55.02" ry="55.02"/>
+<text text-anchor="middle" x="971.04" y="-240.69" font-family="Times,serif" font-size="14.00">en pareja</text>
+<text text-anchor="middle" x="971.04" y="-223.89" font-family="Times,serif" font-size="14.00">(no quiere)</text>
+</g>
+<!-- en pareja\n(no quiere)&#45;&gt;sin\npareja -->
+<g id="edge10" class="edge">
+<title>en pareja\n(no quiere)-&gt;sin\npareja</title>
+<path fill="none" stroke="black" d="M916.34,-244.79C818.3,-258.29 604.29,-280.12 428.87,-244.49 361.87,-230.89 340.24,-227.67 287.24,-184.49 275.35,-174.81 265.02,-161.76 256.74,-149.2"/>
+<polygon fill="black" stroke="black" points="259.9,-147.66 251.62,-141.05 253.97,-151.38 259.9,-147.66"/>
+<text text-anchor="middle" x="604.17" y="-284.88" font-family="Times,serif" font-size="14.00">la otra tarea</text>
+<text text-anchor="middle" x="604.17" y="-268.08" font-family="Times,serif" font-size="14.00">abandona</text>
+</g>
+<!-- sin\npareja&#45;&gt;buscando\npareja -->
+<g id="edge2" class="edge">
+<title>sin\npareja-&gt;buscando\npareja</title>
+<path fill="none" stroke="black" d="M267.98,-119.1C307.73,-131.77 374.88,-153.19 422.82,-168.48"/>
+<polygon fill="black" stroke="black" points="421.62,-171.77 432.21,-171.47 423.74,-165.1 421.62,-171.77"/>
+<text text-anchor="middle" x="349.05" y="-167.65" font-family="Times,serif" font-size="14.00">crear_pareja()</text>
+</g>
+<!-- sin\npareja&#45;&gt;sin\npareja -->
+<g id="edge3" class="edge">
+<title>sin\npareja-&gt;sin\npareja</title>
+<path fill="none" stroke="black" d="M218.23,-140.88C217.89,-152.51 223.07,-161.99 233.74,-161.99 240.58,-161.99 245.17,-158.1 247.49,-152.24"/>
+<polygon fill="black" stroke="black" points="250.94,-152.79 249.03,-142.37 244.03,-151.71 250.94,-152.79"/>
+<text text-anchor="middle" x="233.74" y="-166.19" font-family="Times,serif" font-size="14.00">juntarse_con(id) dió 1</text>
+</g>
+<!-- en pareja\n(no&#45;líder) -->
+<g id="node7" class="node">
+<title>en pareja\n(no-líder)</title>
+<ellipse fill="none" stroke="black" cx="480.31" cy="-68.49" rx="51.44" ry="51.44"/>
+<text text-anchor="middle" x="480.31" y="-72.69" font-family="Times,serif" font-size="14.00">en pareja</text>
+<text text-anchor="middle" x="480.31" y="-55.89" font-family="Times,serif" font-size="14.00">(no-líder)</text>
+</g>
+<!-- sin\npareja&#45;&gt;en pareja\n(no&#45;líder) -->
+<g id="edge4" class="edge">
+<title>sin\npareja-&gt;en pareja\n(no-líder)</title>
+<path fill="none" stroke="black" d="M269.38,-105.54C305.05,-102.18 362.16,-95.9 410.87,-86.49 413.67,-85.95 416.52,-85.36 419.39,-84.74"/>
+<polygon fill="black" stroke="black" points="420.09,-88.17 429.04,-82.51 418.51,-81.35 420.09,-88.17"/>
+<text text-anchor="middle" x="349.05" y="-107.73" font-family="Times,serif" font-size="14.00">juntarse_con(id) dió 0</text>
+</g>
+<!-- en pareja\n(no&#45;líder)&#45;&gt;sin\npareja -->
+<g id="edge8" class="edge">
+<title>en pareja\n(no-líder)-&gt;sin\npareja</title>
+<path fill="none" stroke="black" d="M429.62,-58.46C389.9,-52.62 333.42,-49.25 287.24,-65.69 280.48,-68.1 273.95,-71.79 267.94,-76.02"/>
+<polygon fill="black" stroke="black" points="265.91,-73.17 260.15,-82.07 270.2,-78.7 265.91,-73.17"/>
+<text text-anchor="middle" x="349.05" y="-69.89" font-family="Times,serif" font-size="14.00">abandonar_pareja()</text>
+</g>
+<!-- en pareja\n(líder)&#45;&gt;en pareja\n(no quiere) -->
+<g id="edge9" class="edge">
+<title>en pareja\n(líder)-&gt;en pareja\n(no quiere)</title>
+<path fill="none" stroke="black" d="M770.71,-195.84C808.75,-203.6 863.29,-214.72 905.7,-223.37"/>
+<polygon fill="black" stroke="black" points="904.78,-226.76 915.28,-225.33 906.18,-219.9 904.78,-226.76"/>
+<text text-anchor="middle" x="843.61" y="-225.92" font-family="Times,serif" font-size="14.00">abandonar_pareja()</text>
+</g>
+<!-- en pareja\n(solo) -->
+<g id="node9" class="node">
+<title>en pareja\n(solo)</title>
+<ellipse fill="none" stroke="black" cx="971.04" cy="-55.49" rx="47.31" ry="47.31"/>
+<text text-anchor="middle" x="971.04" y="-59.69" font-family="Times,serif" font-size="14.00">en pareja</text>
+<text text-anchor="middle" x="971.04" y="-42.89" font-family="Times,serif" font-size="14.00">(solo)</text>
+</g>
+<!-- en pareja\n(líder)&#45;&gt;en pareja\n(solo) -->
+<g id="edge6" class="edge">
+<title>en pareja\n(líder)-&gt;en pareja\n(solo)</title>
+<path fill="none" stroke="black" d="M766.2,-164.42C808.32,-141.91 873.73,-106.96 919.05,-82.74"/>
+<polygon fill="black" stroke="black" points="920.46,-85.95 927.63,-78.15 917.16,-79.78 920.46,-85.95"/>
+<text text-anchor="middle" x="843.61" y="-172.36" font-family="Times,serif" font-size="14.00">la otra tarea</text>
+<text text-anchor="middle" x="843.61" y="-155.56" font-family="Times,serif" font-size="14.00">abandona</text>
+</g>
+<!-- en pareja\n(solo)&#45;&gt;sin\npareja -->
+<g id="edge7" class="edge">
+<title>en pareja\n(solo)-&gt;sin\npareja</title>
+<path fill="none" stroke="black" d="M924.59,-44.6C831.32,-23.77 611.65,17.43 428.87,-8.49 363.99,-17.7 342.66,-14.53 287.24,-49.49 278.12,-55.24 269.66,-63.02 262.31,-71.04"/>
+<polygon fill="black" stroke="black" points="259.66,-68.75 255.77,-78.61 264.96,-73.33 259.66,-68.75"/>
+<text text-anchor="middle" x="604.17" y="-8.31" font-family="Times,serif" font-size="14.00">abandonar_pareja()</text>
+</g>
+</g>
+</svg>
